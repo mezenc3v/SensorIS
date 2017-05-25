@@ -7,6 +7,8 @@ namespace SensorIS.WebApi
     {
         public static void Register(HttpConfiguration config)
         {
+            config.EnableCors();
+
             // Web API configuration and services
             config.Formatters.JsonFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("text/html"));
 

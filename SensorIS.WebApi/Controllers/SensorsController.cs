@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using SensorIS.WebApi.Abstract;
 using SensorIS.WebApi.Models;
 using SensorIS.WebApi.Views;
@@ -7,6 +8,7 @@ using SensorIS.WebApi.Views;
 namespace SensorIS.WebApi.Controllers
 {
     [RoutePrefix("api/v1/sensors")]
+    [EnableCors("*", "*", "*")]
     public class SensorsController : ApiController
     {
         private readonly ISensorsRepository _repository;

@@ -39,8 +39,8 @@ namespace SensorIS.WebApi.Models
                 Image = category.Image,
                 Name = category.Name
             };
-
             _context.Categories.Add(createdCategory);
+
             _context.SaveChanges();
 
             return category;
